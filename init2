@@ -1,1 +1,1 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ghettoboo/paradox/refs/heads/main/init))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ghettoboo/paradox/refs/heads/main/init"))()
