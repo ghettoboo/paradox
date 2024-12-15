@@ -1,1 +1,137 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ghettoboo/paradox/refs/heads/main/init"))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
+local website = "https://ads.luarmor.net/get_key?for=Paradox-MsRuvnxeorQM"
+
+local KeySystemWindow = Rayfield:CreateWindow({
+	Name = "Paradox Key System",
+	LoadingTitle = "Paradox Gateway",
+	LoadingSubtitle = ".gg/AdvTXZrBhn",
+	Theme = "Default",
+
+	DisableRayfieldPrompts = true,
+	DisableBuildWarnings = true,
+})
+
+local msgFunc = function(message)
+	Rayfield:Notify({
+		Title = "Key System",
+		Content = message,
+		Duration = 6.5,
+		Image = 4483362458,
+	})
+end
+
+local function disc(var)
+	var:CreateParagraph({Title = "Join the discord!", Content = "- To skip the ad system\n" ..
+		"- Get a Heroes: Minigame script\n" ..
+		"- Support for any issues you have\n" ..
+		"- Become a tester\n" ..
+		"- Interact with other exploiting communities\n" ..
+		"- Join in exclusive giveaways"
+	})
+end
+
+local key
+
+local how = KeySystemWindow:CreateTab("Heroes: Online World", "scroll-text")
+
+how:CreateSection("Key")
+
+how:CreateButton({
+	Name = "Get Key",
+	Callback = function()
+		setclipboard(website)
+		msgFunc(website)
+	end
+})
+
+how:CreateInput({
+	Name = "Enter Key",
+	PlaceholderText = "",
+	RemoveTextAfterFocusLost = false,
+	Callback = function(Text)
+		key = Text
+	end,
+})
+
+how:CreateButton({
+	Name = "Run Script and Check Key",
+	Callback = function()
+		if key then
+			script_key = key
+			loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/f592284225961def380bf2825d36cd27.lua"))()
+		else
+			msgFunc("No Key Found")
+		end
+	end    
+})
+
+how:CreateDivider()
+
+how:CreateSection("Discord")
+
+disc(how)
+
+how:CreateButton({
+	Name = "Join Discord",
+	Callback = function()
+		setclipboard("https://discord.gg/AdvTXZrBhn")
+		Rayfield:Notify({
+			Title = "Copied discord link to clipboard",
+			Content = "https://discord.gg/AdvTXZrBhn",
+			Duration = 6.5,
+			Image = 4483362458,
+		})
+	end    
+})
+
+local mo = KeySystemWindow:CreateTab("Marvel Omega", "scroll-text")
+
+mo:CreateSection("Key")
+
+mo:CreateButton({
+	Name = "Get Key",
+	Callback = function()
+		setclipboard(website)
+		msgFunc(website)
+	end
+})
+
+mo:CreateInput({
+	Name = "Enter Key",
+	PlaceholderText = "",
+	RemoveTextAfterFocusLost = false,
+	Callback = function(Text)
+		key = Text
+	end,
+})
+
+mo:CreateButton({
+	Name = "Run Script and Check Key",
+	Callback = function()
+		if key then
+			script_key = key
+			loadstring(game:HttpGet("https://api.luarmor.net/files/v3/loaders/000da21cc8c321d096830edce113b38e.lua"))()
+		else
+			msgFunc("No Key Found")
+		end
+	end    
+})
+
+mo:CreateDivider()
+
+mo:CreateSection("Discord")
+
+disc(mo)
+
+mo:CreateButton({
+	Name = "Join Discord",
+	Callback = function()
+		setclipboard("https://discord.gg/AdvTXZrBhn")
+		Rayfield:Notify({
+			Title = "Copied discord link to clipboard",
+			Content = "https://discord.gg/AdvTXZrBhn",
+			Duration = 6.5,
+			Image = 4483362458,
+		})
+	end    
+})
